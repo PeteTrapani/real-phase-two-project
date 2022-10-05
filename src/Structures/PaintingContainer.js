@@ -21,7 +21,9 @@ function PaintingPage() {
   }
 
   const paintingToDisplay = painting.filter(paint =>
+
     paint.name.toLowerCase().includes(searchTerm.toLowerCase())
+
   )
 
 

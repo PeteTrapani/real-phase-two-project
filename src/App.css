@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -34,5 +35,29 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.scroll-to-bottom{
+  position: fixed;
+  bottom: 12px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #8b0000;
+  color: #fff;
+}
+
+.scroll-to-bottom .icon{
+  margin-top: 10px;
+  animation: scrollBottom 0.5s alternate ease;
+}
+
+@keyframes scrollBottom{
+  from{
+    transform: translateY(2px);
+  }
+  to{
+    transform: translate(-1px);
   }
 }
