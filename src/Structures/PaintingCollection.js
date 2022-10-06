@@ -10,7 +10,7 @@ function PaintingCollection({ painting }) {
 ))
 
   return (
-    <Card.Group itemsPerRow={6}>
+    <Card.Group itemsPerRow={3}>
       { cards }
     </Card.Group>
   );

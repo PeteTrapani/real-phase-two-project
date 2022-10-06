@@ -7,7 +7,8 @@ function PaintForm() {
   const [formData, setFormData] = useState ({
     img_src: '',
     painting_title: '',
-    colors:''
+    colors:'',
+    Image_URL:''
   })
 
 //function to handle form changes
@@ -24,7 +25,8 @@ function handleChange(event) {
     const newPainting = {
       name: formData.name,
       painting_title: formData.painting_title,
-      colors: formData.colors
+      colors: formData.colors,
+      img_src: formData.img_src
     }
 
     fetch("http://localhost:3000/paintings", {
@@ -39,9 +41,10 @@ function handleChange(event) {
         PaintingPage(data)
         // clear the form after successfully submitting
         setFormData({
-            img_src: '',
+            name: '',
             painting_title: '',
-            colors:''
+            colors:'',
+            img_src:''
         })
       })
 
@@ -77,6 +80,14 @@ function handleChange(event) {
             name="colors"
             value={formData.colors}
             onChange={handleChange}
+          />
+          <Form.Input
+          fluid
+          label="Painting URL"
+          placeholder="Painting url"
+          name="img_src"
+          value={formData.img_src}
+          onChange={handleChange}
           />
         </Form.Group>
         <Form.Button>Submit</Form.Button>

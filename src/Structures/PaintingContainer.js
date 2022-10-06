@@ -6,8 +6,8 @@ import { Container } from "semantic-ui-react";
 
 function PaintingPage() {
   //set up state function
-  const [painting, setPainting] = useState ([])
-  const [searchTerm, setSearchTerm] = useState('')
+  const [usePainting, setPainting] = useState ([])
+  const [useSearchTerm, setSearchTerm] = useState('')
   //fetch our data
   useEffect(() => {
     fetch('http://localhost:3000/paintings')
@@ -17,25 +17,28 @@ function PaintingPage() {
   }, [])
   // function for single state
   const handleAddPainting = (newPainting) => {
-    setPainting([newPainting, ...painting])
+    setPainting([newPainting, ...usePainting])
   }
 
-  const paintingToDisplay = painting.filter(paint =>
-    paint.painting_title.toLowerCase().includes(searchTerm.toLowerCase())
+  const paintingToDisplay = usePainting.filter(paint =>
+    paint.painting_title.toLowerCase().includes(useSearchTerm.toLowerCase())
   )
 
 
   return (
+    <div>
     <Container>
       <h1>Painting Searcher</h1>
       <br />
       <PaintForm onAddPainting={handleAddPainting} />
       <br />
-      <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm} />
+      <Search searchTerm={useSearchTerm} onChangeSearch={setSearchTerm} />
       <br />
       <PaintingCollection painting={paintingToDisplay}/>
     </Container>
+    </div>
   );
+    
 }
 
 export default PaintingPage;
