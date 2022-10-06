@@ -20,8 +20,10 @@ function PaintingPage() {
     setPainting([newPainting, ...usePainting])
   }
 
+
   const paintingToDisplay = usePainting.filter(paint =>
     paint.painting_title.toLowerCase().includes(useSearchTerm.toLowerCase())
+
   )
 
 
