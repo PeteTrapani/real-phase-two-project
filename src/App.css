@@ -1,4 +1,6 @@
-
+a {
+  color: #fff;
+}
 .App {
   text-align: center;
 }
@@ -26,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #d19f9d;
 }
 
 @keyframes App-logo-spin {
@@ -37,7 +39,7 @@
     transform: rotate(360deg);
   }
 }
-.scroll-to-bottom{
+.scroll-to-bottom {
   position: fixed;
   bottom: 12px;
   left: 50px;
@@ -48,16 +50,24 @@
   color: #fff;
 }
 
-.scroll-to-bottom .icon{
+.scroll-to-bottom .icon {
   margin-top: 10px;
   animation: scrollBottom 0.5s alternate ease;
 }
 
-@keyframes scrollBottom{
-  from{
+@keyframes scrollBottom {
+  from {
     transform: translateY(2px);
   }
-  to{
+  to {
     transform: translate(-1px);
   }
+}
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
 }

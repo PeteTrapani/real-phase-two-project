@@ -21,7 +21,13 @@
 .App-intro {
   font-size: large;
 }
+.a {
+  color: #fcedec;
+}
 
+.a:hover {
+  color: #5c6477;
+}
 .flexbox-container {
   display: flex;
   justify-content: space-between;
@@ -38,10 +44,34 @@
   border-radius: 15px;
 }
 
-#textformat {
+.text-format {
+  display: inline;
+  padding: 170px;
   font-size: 60px;
-  text-align: left;
-  color: #c7d5e0;
+  text-align: center;
+  color: #d19f9d;
   margin-left: 30px;
   line-height: 100px;
+}
+.bullet {
+  list-style-type: none;
+  background-color: #d19f9d;
+  border-radius: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.text-format2 {
+  font-size: 60px;
+  text-align: center;
+  color: #d19f9d;
+  margin-left: 30px;
+  line-height: 300px;
+}
+
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
