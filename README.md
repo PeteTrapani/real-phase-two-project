@@ -1,4 +1,3 @@
- // 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=6D1BE30F07E738AE8C58DA352FDC2211&steamids=76561198027064313'
-//76561198027064313 steam user ID
-//76561198375251575 steam user ID
-//6D1BE30F07E738AE8C58DA352FDC2211 api key
+Paint along with Bob Ross. 
+Create, Destroy, Edit.
+Complete with links to tutorial videos.
